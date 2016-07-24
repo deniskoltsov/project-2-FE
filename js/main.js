@@ -114,38 +114,41 @@ document.addEventListener('DOMContentLoaded', function() {
             makePlayerChart(playerInfo, playerAvgStats, playerTtlStats);
             //favorite the player
             $(addFavPlayerBtn).css('display', 'block');
-            $(addFavPlayerBtn).on('click', function() {
-              var newPlayer = {};
-              newPlayer['firstName'] = response.first_name;
-              newPlayer['lastName'] = response.last_name;
-              newPlayer['fullName'] = response.full_name;
-              newPlayer['id'] = response.id;
-              newPlayer['birthPlace'] = response.birth_place;
-              newPlayer['birthDate'] = response.birthdate;
-              newPlayer['draftRound'] = response.draft.round;
-              newPlayer['draftPick'] = response.draft.pick;
-              newPlayer['draftYear'] = response.draft.year;
-              newPlayer['experience'] = response.experience;
-              newPlayer['jerseyNum'] = response.jersey_number;
-              newPlayer['position'] = response.position;
-              newPlayer['teamName'] = response.team.name;
-              newPlayer['height'] = response.height;
-              newPlayer['weight'] = response.weight;
-              newPlayer['link'] = 'https://nba-players.herokuapp.com/players/' + response.last_name + '/' + response.first_name;
-              $.ajax({
-                url: url + 'player/new',
-                method: 'POST',
-                data: newPlayer,
-                dataType: 'json'
-              }).done(function(response) {
-                console.log("response: ", response);
-                console.log('post complete');
-              });
-            })
+            window.currentPlayerResponse = response;
           })
         })
       })
     });
+
+    $(addFavPlayerBtn).on('click', function() {
+      var newPlayer = {};
+      var response = window.currentPlayerResponse;
+      newPlayer['firstName'] = response.first_name;
+      newPlayer['lastName'] = response.last_name;
+      newPlayer['fullName'] = response.full_name;
+      newPlayer['id'] = response.id;
+      newPlayer['birthPlace'] = response.birth_place;
+      newPlayer['birthDate'] = response.birthdate;
+      newPlayer['draftRound'] = response.draft.round;
+      newPlayer['draftPick'] = response.draft.pick;
+      newPlayer['draftYear'] = response.draft.year;
+      newPlayer['experience'] = response.experience;
+      newPlayer['jerseyNum'] = response.jersey_number;
+      newPlayer['position'] = response.position;
+      newPlayer['teamName'] = response.team.name;
+      newPlayer['height'] = response.height;
+      newPlayer['weight'] = response.weight;
+      newPlayer['link'] = 'https://nba-players.herokuapp.com/players/' + response.last_name + '/' + response.first_name;
+      $.ajax({
+        url: url + 'player/new',
+        method: 'POST',
+        data: newPlayer,
+        dataType: 'json'
+      }).done(function(response) {
+        console.log("response: ", response);
+        console.log('post complete');
+      });
+    })
 
     $(standingBtn).on('click', function(ev) {
       ev.preventDefault();
