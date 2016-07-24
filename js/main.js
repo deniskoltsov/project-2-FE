@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var standingLosses = [];
 
     // the URL of our backend to use in our AJAX calls:
-    // var url = 'http://localhost:3000';
+    // var url = 'http://localhost:3000/';
     var url = 'https://ancient-savannah-39262.herokuapp.com/';
 
     //on click event trigger
@@ -391,12 +391,14 @@ document.addEventListener('DOMContentLoaded', function() {
             standingWins.push(teamsArr[k].wins);
             standingLosses.push(teamsArr[k].losses);
           }
+          console.log(standingName, standingWins,standingLosses);
         }
       }
       standingsChart(standingName, standingWins, standingLosses);
     };
 
     function standingsChart(standingName, standingWins, standingLosses) {
+
       $('#standings').highcharts({
         chart: {
           type: 'column'
