@@ -390,9 +390,10 @@ document.addEventListener('DOMContentLoaded', function() {
             standingName.push(teamsArr[k].name);
             standingWins.push(teamsArr[k].wins);
             standingLosses.push(teamsArr[k].losses);
+            console.log(standingName,standingWins,standingLosses);
           }
         }
-        console.log(standingName,standingWins,standingLosses);
+
       }
       standingsChart(standingName, standingWins, standingLosses);
     };
