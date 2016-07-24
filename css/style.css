@@ -1,0 +1,168 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+}
+main {
+  display: none;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 35%;
+  z-index: 99;
+}
+.team-name h1 {
+  font-family: 'Roboto';
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #F58426;
+  font-size: 30px;
+  letter-spacing: 10px;
+  font-size: 3.5vw;
+}
+.team-name h3 {
+  font-family: 'Roboto';
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  letter-spacing: 10px;
+  font-size: 1.2vw;
+  margin: 0 auto;
+  padding-top: 3%;
+}
+.grid {
+  text-align: center;
+  margin: 0 auto;
+  clear: both;
+}
+h2 {
+  margin: 0;
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.player-image {
+  width: 95%;
+  border: 2px solid;
+  border-color: #FFFFFF;
+  border-radius: 5px;
+}
+.grid-item .player-image:hover {
+  float: left;
+  transition: 0.2s ease;
+  width: 98%;
+  border: none;
+  border-radius: none;
+}
+.grid-item {
+  width: 150px;
+  float: left;
+  margin: 5px;
+}
+.grid-item h3 {
+  font-family: 'Roboto';
+  font-size: .5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+.grid-item:hover h3 {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: .6em;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  /*color: #F58426;*/
+  text-transform: uppercase;
+  text-align: center;
+}
+#team-main h5 {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 1em;
+  color: white;
+}
+.basic-team-profile {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+#submit {
+  border: 1px solid gray;
+}
+#chart-container {
+  display: none;
+  min-width: 310px;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+}
+#buttons-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-between;
+  padding: 2%;
+  background-color: #2B2B2C;
+}
+#buttons-container button {
+  color: white;
+  margin: 1%;
+  border: 1px solid gray;
+  font-size: .7em;
+}
+#grid {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-flow: wrap;
+}
+
+#player-main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;;
+  align-content: space-around;;
+}
+
+#player-chart-container-1 {
+  display: none;
+  min-width: 310px;
+  width: 50%;
+  height: 400px;
+  margin: 0 auto;
+}
+#player-chart-container-2 {
+  display: none;
+  min-width: 310px;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#add-fav-player-btn {
+  display: none;
+}
+
+.charts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#fav-display {
+  display: none;
+  width: 100%;
+  background-color: #2B2B2C;
+}

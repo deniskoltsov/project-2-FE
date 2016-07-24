@@ -1,0 +1,270 @@
+.Sixers {
+  background-color: #006BB6;
+}
+.Sixers .grid-item .player-image:hover {
+  background-color: #ED174C;
+}
+.Sixers h1, .Sixers .grid-item:hover h3, .Sixers #player-main h4, .Sixers #player-main h5 {
+  color: #ED174C;
+}
+.Celtics {
+  background-color: #008348;
+}
+.Celtics .grid-item .player-image:hover {
+  background-color: #FFFFFF;
+}
+.Celtics h1, .Celtics .grid-item:hover h3, .Celtics #player-main h4, .Celtics #player-main h5 {
+  color: #FFFFFF;
+}
+.Hawks {
+  background-color: #E03A3E;
+}
+.Hawks .grid-item .player-image:hover {
+  background-color: #C3D600;
+}
+.Hawks h1, .Hawks .grid-item:hover h3, .Hawks #player-main h4, .Hawks #player-main h5 {
+  color: #C3D600;
+}
+.Nets {
+  background-color: #191919;
+}
+.Nets .grid-item .player-image:hover {
+  background-color: #FFFFFF;
+}
+.Nets h1, .Nets .grid-item:hover h3, .Nets #player-main h4, .Nets #player-main h5 {
+  color: #FFFFFF;
+}
+.Hornets {
+  background-color: #008CA8;
+}
+.Hornets .grid-item .player-image:hover {
+  background-color: #1D1160;
+}
+.Hornets h1, .Hornets .grid-item:hover h3, .Hornets #player-main h4, .Hornets #player-main h5 {
+  color: #1D1160;
+}
+.Bulls {
+  background-color: #CE1141;
+}
+.Bulls .grid-item .player-image:hover {
+  background-color: #FFFFFF;
+}
+.Bulls h1, .Bulls .grid-item:hover h3, .Bulls #player-main h4, .Bulls #player-main h5 {
+  color: #FFFFFF;
+}
+.Cavaliers {
+  background-color: #860038;
+}
+.Cavaliers .grid-item .player-image:hover {
+  background-color: #FDBB30;
+}
+.Cavaliers h1, .Cavaliers .grid-item:hover h3, .Cavaliers #player-main h4, .Cavaliers #player-main h5 {
+  color: #FDBB30;
+}
+.Mavericks {
+  background-color: #007DC5;
+}
+.Mavericks .grid-item .player-image:hover {
+  background-color: #C4CED3;
+}
+.Mavericks h1, .Mavericks .grid-item:hover h3, .Mavericks #player-main h4, .Mavericks #player-main h5 {
+  color: #C4CED3;
+}
+.Nuggets {
+  background-color: #4FA8FF;
+}
+.Nuggets .grid-item .player-image:hover {
+  background-color: #FFB20F;
+}
+.Nuggets h1, .Nuggets .grid-item:hover h3, .Nuggets #player-main h4, .Nuggets #player-main h5 {
+  color: #FFB20F;
+}
+.Pistons {
+  background-color: #006BB6;
+}
+.Pistons .grid-item .player-image:hover {
+  background-color: #ED174C;
+}
+.Pistons h1, .Pistons .grid-item:hover h3, .Pistons #player-main h4, .Pistons #player-main h5 {
+  color: #ED174C;
+}
+.Warriors {
+  background-color: #006BB6;
+}
+.Warriors .grid-item .player-image:hover {
+  background-color: #FDB927;
+}
+.Warriors h1, .Warriors .grid-item:hover h3, .Warriors #player-main h4, .Warriors #player-main h5 {
+  color: #FDB927;
+}
+.Rockets {
+  background-color: #CE1141;
+}
+.Rockets .grid-item .player-image:hover {
+  background-color: #C4CED3;
+}
+.Rockets h1, .Rockets .grid-item:hover h3, .Rockets #player-main h4, .Rockets #player-main h5 {
+  color: #C4CED3;
+}
+.Pacers {
+  background-color: #FFC633;
+}
+.Pacers .grid-item .player-image:hover {
+  background-color: #00275D;
+}
+.Pacers h1, .Pacers .grid-item:hover h3, .Pacers #player-main h4, .Pacers #player-main h5 {
+  color: #00275D;
+}
+.Clippers {
+  background-color: #ED174C;
+}
+.Clippers .grid-item .player-image:hover {
+  background-color: #006BB6;
+}
+.Clippers h1, .Clippers .grid-item:hover h3, .Clippers #player-main h4, .Clippers #player-main h5 {
+  color: #006BB6;
+}
+.Lakers {
+  background-color: #552582;
+}
+.Lakers .grid-item .player-image:hover {
+  background-color: #FDB927;
+}
+.Lakers h1, .Lakers .grid-item:hover h3, .Lakers #player-main h4, .Lakers #player-main h5 {
+  color: #FDB927;
+}
+.Grizzlies {
+  background-color: #23375B;
+}
+.Grizzlies .grid-item .player-image:hover {
+  background-color: #6189B9;
+}
+.Grizzlies h1, .Grizzlies .grid-item:hover h3, .Grizzlies #player-main h4, .Grizzlies #player-main h5 {
+  color: #6189B9;
+}
+.Heat {
+  background-color: #98002E;
+}
+.Heat .grid-item .player-image:hover {
+  background-color: #F9A01B;
+}
+.Heat h1, .Heat .grid-item:hover h3, .Heat #player-main h4, .Heat #player-main h5 {
+  color: #F9A01B;
+}
+.Bucks {
+  background-color: #00471B;
+}
+.Bucks .grid-item .player-image:hover {
+  background-color: #EEE1C6;
+}
+.Bucks h1, .Bucks .grid-item:hover h3, .Bucks #player-main h4, .Bucks #player-main h5 {
+  color: #EEE1C6;
+}
+.Timberwolves {
+  background-color: #005083;
+}
+.Timberwolves h1, .Timberwolves .grid-item:hover h3, .Timberwolves #player-main h4, .Timberwolves #player-main h5 {
+  color: #C4CED3;
+}
+.Timberwolves .grid-item .player-image:hover {
+  background-color: #C4CED3;
+}
+.Pelicans {
+  background-color: #002B5C;
+}
+.Pelicans .grid-item .player-image:hover {
+  background-color: #B4975A;
+}
+.Pelicans h1, .Pelicans .grid-item:hover h3, .Pelicans #player-main h4, .Pelicans #player-main h5 {
+  color: #B4975A;
+}
+.Knicks {
+  background-color: #006BB6;
+}
+.Knicks .grid-item .player-image:hover {
+  background-color: #F58426;
+}
+.Knicks h1, .Knicks .grid-item:hover h3, .Knicks #player-main h4, .Knicks #player-main h5 {
+  color: #F58426;
+}
+.Thunder {
+  background-color: #007DC3;
+}
+.Thunder .grid-item .player-image:hover {
+  background-color: #F05133;
+}
+.Thunder h1, .Thunder .grid-item:hover h3, .Thunder #player-main h4, .Thunder #player-main h5 {
+  color: #F05133;
+}
+.Magic {
+  background-color: #007DC5;
+}
+.Magic .grid-item .player-image:hover {
+  background-color: #C4CED3;
+}
+.Magic h1, .Magic .grid-item:hover h3, .Magic #player-main h4, .Magic #player-main h5 {
+  color: #C4CED3;
+}
+.Suns {
+  background-color: #E56020;
+}
+.Suns .grid-item .player-image:hover {
+  background-color: #1D1160;
+}
+.Suns h1, .Suns .grid-item:hover h3, .Suns #player-main h4, .Suns #player-main h5 {
+  color: #1D1160;
+}
+.Trail {
+  background-color: #F0163A;
+}
+.Trail .grid-item .player-image:hover {
+  background-color: #B6BFBF;
+}
+.Trail h1, .Trail .grid-item:hover h3, .Trail #player-main h4, .Trail #player-main h5 {
+  color: #B6BFBF;
+}
+.Kings {
+  background-color: #724C9F;
+}
+.Kings .grid-item .player-image:hover {
+  background-color: #8E9090;
+}
+.Kings h1, .Kings .grid-item:hover h3, .Kings #player-main h4, .Kings #player-main h5 {
+  color: #8E9090;
+}
+.Spurs {
+  background-color: #B6BFBF;
+}
+.Spurs .grid-item .player-image:hover {
+  background-color: #000000;
+}
+.Spurs h1, .Spurs .grid-item:hover h3, .Spurs #player-main h4, .Spurs #player-main h5 {
+  color: #000000;
+}
+.Raptors {
+  background-color: #CE1141;
+}
+.Raptors .grid-item .player-image:hover {
+  background-color: #C4CED3;
+}
+.Raptors h1, .Raptors .grid-item:hover h3, .Raptors #player-main h4, .Raptors #player-main h5 {
+  color: #C4CED3;
+}
+.Jazz {
+  background-color: #002B5C;
+}
+.Jazz .grid-item .player-image:hover {
+  background-color: #F9A01B;
+}
+.Jazz h1, .Jazz .grid-item:hover h3, .Jazz #player-main h4, .Jazz #player-main h5 {
+  color: #F9A01B;
+}
+.Wizards {
+  background-color: #002566;
+}
+.Wizards .grid-item .player-image:hover {
+  background-color: #F5002F;
+}
+.Wizards h1, .Wizards .grid-item:hover h3, .Wizards #player-main h4, .Wizards #player-main h5 {
+  color: #F5002F;
+}
