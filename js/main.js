@@ -396,6 +396,53 @@ document.addEventListener('DOMContentLoaded', function() {
       standingsChart(standingName, standingWins, standingLosses);
     };
 
+    function standingsChart(standingName, standingWins, standingLosses){
+    $('#standings').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Team Standings'
+        },
+        subtitle: {
+            text: 'for 2015 Season'
+        },
+        xAxis: {
+            categories: [standingName],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Games'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Wins',
+            data: [standingWins]
+
+        }, {
+            name: 'Losses',
+            data: [standingLosses]
+        }]
+    });
+});
+    }
+
     function makePlayerChart(playerInfo, playerAvgStats, playerTtlStats) {
       $('.charts').css('display', 'flex');
       $('#player-chart-container-1').css('display', 'block')
