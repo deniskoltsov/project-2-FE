@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         queryString: teamID
       };
       $.ajax({
-        url: url + 'team',
+        url: url + '/team',
         method: 'POST',
         data: data,
         dataType: 'json'
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
           $('.basic-team-profile').css('display', 'none');
           $('.team-name').css('display', 'none');
           $('.charts').css('display', 'none');
-          $.get(url +'player/new', function(response) {
+          $.get('http://localhost:3000/player/new', function(response) {
             if (response.length) {
               // console.log(response);
               seeFavPlayers(response);
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 id: chosenId
               };
               $.ajax({
-                url: url + 'player/' + chosenId,
+                url: url + '/player/' + chosenId,
                 dataType: 'json',
                 data: data,
                 method: 'delete'
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
             queryString: playerID
           };
           $.ajax({
-            url: url + 'player',
+            url: url + '/player',
             method: 'POST',
             data: data,
             dataType: 'json'
@@ -132,15 +132,15 @@ document.addEventListener('DOMContentLoaded', function() {
               newPlayer['height'] = response.height;
               newPlayer['weight'] = response.weight;
               newPlayer['link'] = 'https://nba-players.herokuapp.com/players/' + response.last_name + '/' + response.first_name;
-                $.ajax({
-                  url: url + 'player/new',
-                  method: 'POST',
-                  data: newPlayer,
-                  dataType: 'json'
-                }).done(function(response) {
-                  console.log( "response: ", response );
-                  console.log('post complete');
-                });
+              $.ajax({
+                url: url + '/player/new',
+                method: 'POST',
+                data: newPlayer,
+                dataType: 'json'
+              }).done(function(response) {
+                console.log("response: ", response);
+                console.log('post complete');
+              });
             })
           })
         })
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       $('#chart-container').css('display', 'block');
       $.ajax({
-        url: url + 'standing',
+        url: url + '/standing',
         method: 'POST',
         data: data,
         dataType: 'json'
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
           queryString: teamStatsBtn.id
         };
         $.ajax({
-          url: url + 'team-stats',
+          url: url + '/team-stats',
           method: 'POST',
           data: data,
           dataType: 'json'
@@ -394,6 +394,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
       standingsChart(standingName, standingWins, standingLosses);
+    };
+
+    function standingsChart(standingName, standingWins, standingLosses) {
+      $('#standings').highcharts({
+        chart: {
+          type: 'column'
+        },
+        title: {
+          text: 'Team Standings'
+        },
+        subtitle: {
+          text: 'for 2015 Season'
+        },
+        xAxis: {
+          categories: [standingName],
+          crosshair: true
+        },
+        yAxis: {
+          min: 0,
+          title: {
+            text: 'Games'
+          }
+        },
+        tooltip: {
+          headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+          pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+          footerFormat: '</table>',
+          shared: true,
+          useHTML: true
+        },
+        plotOptions: {
+          column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+          }
+        },
+        series: [{
+          name: 'Wins',
+          data: [standingWins]
+
+        }, {
+          name: 'Losses',
+          data: [standingLosses]
+        }]
+      });
     };
 
     function makePlayerChart(playerInfo, playerAvgStats, playerTtlStats) {
