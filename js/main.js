@@ -392,6 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
             standingLosses.push(teamsArr[k].losses);
           }
         }
+        console.log(standingName,standingWins,standingLosses);
       }
       standingsChart(standingName, standingWins, standingLosses);
     };
