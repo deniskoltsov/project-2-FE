@@ -132,15 +132,15 @@ document.addEventListener('DOMContentLoaded', function() {
               newPlayer['height'] = response.height;
               newPlayer['weight'] = response.weight;
               newPlayer['link'] = 'https://nba-players.herokuapp.com/players/' + response.last_name + '/' + response.first_name;
-                $.ajax({
-                  url: url + '/player/new',
-                  method: 'POST',
-                  data: newPlayer,
-                  dataType: 'json'
-                }).done(function(response) {
-                  console.log( "response: ", response );
-                  console.log('post complete');
-                });
+              $.ajax({
+                url: url + '/player/new',
+                method: 'POST',
+                data: newPlayer,
+                dataType: 'json'
+              }).done(function(response) {
+                console.log("response: ", response);
+                console.log('post complete');
+              });
             })
           })
         })
@@ -396,52 +396,51 @@ document.addEventListener('DOMContentLoaded', function() {
       standingsChart(standingName, standingWins, standingLosses);
     };
 
-    function standingsChart(standingName, standingWins, standingLosses){
-    $('#standings').highcharts({
+    function standingsChart(standingName, standingWins, standingLosses) {
+      $('#standings').highcharts({
         chart: {
-            type: 'column'
+          type: 'column'
         },
         title: {
-            text: 'Team Standings'
+          text: 'Team Standings'
         },
         subtitle: {
-            text: 'for 2015 Season'
+          text: 'for 2015 Season'
         },
         xAxis: {
-            categories: [standingName],
-            crosshair: true
+          categories: [standingName],
+          crosshair: true
         },
         yAxis: {
-            min: 0,
-            title: {
-                text: 'Games'
-            }
+          min: 0,
+          title: {
+            text: 'Games'
+          }
         },
         tooltip: {
-            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
-            footerFormat: '</table>',
-            shared: true,
-            useHTML: true
+          headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+          pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+          footerFormat: '</table>',
+          shared: true,
+          useHTML: true
         },
         plotOptions: {
-            column: {
-                pointPadding: 0.2,
-                borderWidth: 0
-            }
+          column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+          }
         },
         series: [{
-            name: 'Wins',
-            data: [standingWins]
+          name: 'Wins',
+          data: [standingWins]
 
         }, {
-            name: 'Losses',
-            data: [standingLosses]
+          name: 'Losses',
+          data: [standingLosses]
         }]
-    });
-});
-    }
+      });
+    };
 
     function makePlayerChart(playerInfo, playerAvgStats, playerTtlStats) {
       $('.charts').css('display', 'flex');
