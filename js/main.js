@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     function standingsChart(standingName, standingWins, standingLosses) {
-      $('#standings').highcharts({
+      $('#chart-container').highcharts({
         chart: {
           type: 'column'
         },
@@ -409,7 +409,7 @@ document.addEventListener('DOMContentLoaded', function() {
           text: 'for 2015 Season'
         },
         xAxis: {
-          categories: [standingName],
+          categories: standingName,
           crosshair: true
         },
         yAxis: {
@@ -434,11 +434,11 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         series: [{
           name: 'Wins',
-          data: [standingWins]
+          data: standingWins
 
         }, {
           name: 'Losses',
-          data: [standingLosses]
+          data: standingLosses
         }]
       });
     };
