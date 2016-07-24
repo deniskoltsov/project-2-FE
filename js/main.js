@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         queryString: teamID
       };
       $.ajax({
-        url: url + '/team',
+        url: url + 'team',
         method: 'POST',
         data: data,
         dataType: 'json'
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
           $('.basic-team-profile').css('display', 'none');
           $('.team-name').css('display', 'none');
           $('.charts').css('display', 'none');
-          $.get('http://localhost:3000/player/new', function(response) {
+          $.get(url + 'player/new', function(response) {
             if (response.length) {
               // console.log(response);
               seeFavPlayers(response);
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 id: chosenId
               };
               $.ajax({
-                url: url + '/player/' + chosenId,
+                url: url + 'player/' + chosenId,
                 dataType: 'json',
                 data: data,
                 method: 'delete'
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
             queryString: playerID
           };
           $.ajax({
-            url: url + '/player',
+            url: url + 'player',
             method: 'POST',
             data: data,
             dataType: 'json'
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
               newPlayer['weight'] = response.weight;
               newPlayer['link'] = 'https://nba-players.herokuapp.com/players/' + response.last_name + '/' + response.first_name;
               $.ajax({
-                url: url + '/player/new',
+                url: url + 'player/new',
                 method: 'POST',
                 data: newPlayer,
                 dataType: 'json'
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       $('#chart-container').css('display', 'block');
       $.ajax({
-        url: url + '/standing',
+        url: url + 'standing',
         method: 'POST',
         data: data,
         dataType: 'json'
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
           queryString: teamStatsBtn.id
         };
         $.ajax({
-          url: url + '/team-stats',
+          url: url + 'team-stats',
           method: 'POST',
           data: data,
           dataType: 'json'
