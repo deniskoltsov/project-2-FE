@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var gridItemSelect = document.querySelectorAll('.grid-item');
         //click on player image
         $(gridItemSelect).on('click', function(ev) {
+          $('#chart-container').css('dispay', 'none');
           $(seeFavPlayerBtn).css('display', 'none');
           ev.preventDefault();
           var playerID = $(this).attr('id');
